@@ -20,22 +20,25 @@
     var CONFIG = {"hostname":"victorsun88.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="生活中有三种常见的概率分布：正态分布（高斯分布）、对数正态分布、幂律分布。">
+  <meta name="description" content="从数学上看，有很多种类的概率分布，总体根据分布形状可以分为两大类：轻尾分布与拖尾分布。所谓轻尾分布，指的是概率分布相对集中，当取值过大或过小时，概率迅速趋近于0；而拖尾分布刚好相反，概率分布相对不集中，即使数值很大以后，还是有一定的概率出现，其分布曲线呈现出一个长长的尾巴。在生活中有三种常见的概率分布，分别是正态分布（高斯分布）、对数正态分布和幂律分布。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="生活中的概率分布">
 <meta property="og:url" content="https://victorsun88.github.io/2025/12/13/%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83/index.html">
 <meta property="og:site_name" content="钟灵毓秀">
-<meta property="og:description" content="生活中有三种常见的概率分布：正态分布（高斯分布）、对数正态分布、幂律分布。">
+<meta property="og:description" content="从数学上看，有很多种类的概率分布，总体根据分布形状可以分为两大类：轻尾分布与拖尾分布。所谓轻尾分布，指的是概率分布相对集中，当取值过大或过小时，概率迅速趋近于0；而拖尾分布刚好相反，概率分布相对不集中，即使数值很大以后，还是有一定的概率出现，其分布曲线呈现出一个长长的尾巴。在生活中有三种常见的概率分布，分别是正态分布（高斯分布）、对数正态分布和幂律分布。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://victorsun88.github.io/images/probability/fig1.png">
-<meta property="og:image" content="https://victorsun88.github.io/images/probability/fig2.png">
-<meta property="og:image" content="https://victorsun88.github.io/images/probability/fig3.png">
+<meta property="og:image" content="https://victorsun88.github.io/source/images/probability/fig1.png">
+<meta property="og:image" content="https://victorsun88.github.io/source/images/probability/fig5.png">
+<meta property="og:image" content="https://victorsun88.github.io/source/images/probability/fig2.png">
+<meta property="og:image" content="https://victorsun88.github.io/source/images/probability/fig3.png">
+<meta property="og:image" content="https://victorsun88.github.io/source/images/probability/fig4.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2d2c71c6d3844ea6afb297d3dcacd3fa.png">
 <meta property="article:published_time" content="2025-12-13T02:37:51.121Z">
-<meta property="article:modified_time" content="2026-01-23T03:45:32.464Z">
+<meta property="article:modified_time" content="2026-01-24T13:21:40.915Z">
 <meta property="article:author" content="钟于毓">
 <meta property="article:tag" content="求知 思考 感悟 成长">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://victorsun88.github.io/images/probability/fig1.png">
+<meta name="twitter:image" content="https://victorsun88.github.io/source/images/probability/fig1.png">
 
 <link rel="canonical" href="https://victorsun88.github.io/2025/12/13/%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83/">
 
@@ -195,7 +198,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2026-01-23 11:45:32" itemprop="dateModified" datetime="2026-01-23T11:45:32+08:00">2026-01-23</time>
+                <time title="修改时间：2026-01-24 21:21:40" itemprop="dateModified" datetime="2026-01-24T21:21:40+08:00">2026-01-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,14 +216,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>680</span>
+              <span>2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -232,23 +235,62 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>生活中有三种常见的概率分布：正态分布（高斯分布）、对数正态分布、幂律分布。</p>
+        <p>从数学上看，有很多种类的概率分布，总体根据分布形状可以分为两大类：轻尾分布与拖尾分布。所谓轻尾分布，指的是概率分布相对集中，当取值过大或过小时，概率迅速趋近于0；而拖尾分布刚好相反，概率分布相对不集中，即使数值很大以后，还是有一定的概率出现，其分布曲线呈现出一个长长的尾巴。在生活中有三种常见的概率分布，分别是正态分布（高斯分布）、对数正态分布和幂律分布。</p>
 <span id="more"></span>
 
-<h1 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h1><p>正态分布是生活中最常见的分布，因此称之为“正态”即“正常的状态”。它的分布形状是一个钟形曲线，有明确定义的平均值和标准差，并且概率分布集中于平均值的两侧，在边缘处概率值迅速减小至0，是最容易预测的一种分布。</p>
-<p>中心极限定理：当一个事件的期望同时受到很多随机因素影响，并且这些随机因素之间互相独立时，即随机因素是一种叠加的状态，这时期望值呈现出来的分布就是正态分布。</p>
+<h1 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h1><p>正态分布是生活中最常见的分布之一，因此称之为“正态”即“正常的状态”。它的分布形状是一个钟形曲线，有明确定义(well-defined)的平均值和标准差(涨落)，并且概率分布集中于平均值的两侧，在边缘处概率值迅速减小至0，是最容易预测的一种分布。</p>
+<p><strong>中心极限定理</strong>：当一个事件的期望同时受到很多随机因素影响，并且这些随机因素之间通过叠加效应共同影响结果时，这时期望值呈现出来的分布就是正态分布。</p>
+<p>[<br>E &#x3D; X_1 + X_2 + X_3 + \cdots<br>]</p>
 <p>例如随机掷硬币，正面为+1，反面为-1，连续掷10000次时，其总和以及平均值为：</p>
-<p><img src="/images/probability/fig1.png" alt="正态分布"></p>
-<p>如果正面为+1，反面为0，则结果变为（这类似于生男孩和女孩的人数）：</p>
-<p><img src="/images/probability/fig2.png" alt="正态分布"></p>
-<p>如果进行10000次实验，总和的分布呈现出正态分布：</p>
-<p><img src="/images/probability/fig3.png" alt="正态分布"></p>
-<h1 id="对数正态分布"><a href="#对数正态分布" class="headerlink" title="对数正态分布"></a>对数正态分布</h1><p>当一个事件的期望受到多个因素影响，并且这些影响因素之间不是互相独立的，它们体现在期望值上是相乘的关系时，这时给期望值取一个对数，就能把相乘的因子变成相加的项，因此在取对数之后呈现出正态分布，这种分布我们称之为对数正态分布。</p>
+<!-- 
+![+1和-1](/images/probability/fig1.png) 
+-->
+<p><img src="/source/images/probability/fig1.png" alt="+1和-1"></p>
+<p>注意这里是进行10000个独立的分别抛掷1,2,$\cdots$,10000次硬币的实验，并不是连续抛掷10000次硬币的结果，如果连续抛掷10000次的话，结果不会如此随机，而是如下所示：</p>
+<!-- 
+![+1和-1](/images/probability/fig5.png) 
+-->
+<p><img src="/source/images/probability/fig5.png" alt="+1和0"></p>
+<p>会出现大部分时间连续处于正或负的区域，其穿越 $y&#x3D;0$ 的次数是非常有限的，而不是在0的上下来回波动，这是由于当硬币连续出现多次正或负时，曲线已经偏离0很远，如果要穿越曲线反向的话，需要先抵消掉原来的部分，就会比其单调增加要花更多的次数。</p>
+<p>当投掷次数为10000次时，其总和的概率分布呈现出正态分布：</p>
+<!-- 
+![+1和-1](/images/probability/fig2.png) 
+-->
+<p><img src="/source/images/probability/fig2.png" alt="+1和0"></p>
+<p>如果正面为+1，反面为0，则结果变为（这类似于生男孩和女孩）：</p>
+<!-- 
+![+1和-1](/images/probability/fig3.png) 
+-->
+<p><img src="/source/images/probability/fig3.png" alt="+1和0"></p>
+<p>如果进行10000次实验，总和概率分布为：</p>
+<!-- 
+![+1和-1](/images/probability/fig4.png) 
+-->
+<p><img src="/source/images/probability/fig4.png" alt="正态分布"></p>
+<p>其涨落比第一种情况要小，是因为0对涨落没有贡献。</p>
+<h1 id="对数正态分布"><a href="#对数正态分布" class="headerlink" title="对数正态分布"></a>对数正态分布</h1><h2 id="神奇的对数"><a href="#神奇的对数" class="headerlink" title="神奇的对数"></a>神奇的对数</h2><p>苏格兰数学家约翰·纳皮尔（John Napier）于1614年发表《奇妙对数表》，为解决大数乘除运算的繁琐而引入对数。它是一个深植于自然中的底层代码，它无处不在，于自然数值紧密地联系在一起。</p>
+<p>对数最重要的功能就在于它可以把乘除运算变成加减，原数的非线性运算通过取对数的方式就转化为了线性的运算：</p>
+<p>[<br>logN_1 N_2 N_3 &#x3D; logN_1 + logN_2 + logN_3<br>]</p>
+<p>[<br>k\cdot logN &#x3D; logN^k<br>]</p>
+<p>由此我们发现，对一个数值取对数，就可以得到其数量级大小。原本跨越几个数量级的数字，通过对数运算就可以将其“展平”，变成大小相近的数字。</p>
+<p>通过微分运算可以发现，对数的变化量就是原数的相对变化量：</p>
+<p>[<br>d(logN)&#x3D;\frac{dN}{N}<br>]</p>
+<p>这展现了一个数字的增长速度与数量级变化之间的关系，如果一个数字N是线性增大的，那么其数量级的变化随着数值的增加却越来越小。</p>
+<p>它揭示了对数在自然变化中的强大之处，对数的增大不是一个线性增加的过程（永远以一个恒定的速率增长），而是取决于当前所处的状态。当一个数字足够大时，它需要更大的变化量才能使其对数也呈现出可观的变化。这与人类感官的感受是对应的，例如我们对光、声、震动的感知近似对数响应（如光强、分贝、里氏震级等）。</p>
+<h2 id="对数坐标"><a href="#对数坐标" class="headerlink" title="对数坐标"></a>对数坐标</h2><p>对数坐标的定义基于对数的数学性质：坐标轴上的距离与数值的对数成正比，即等间隔对应等比例变化（如每增加一个单位刻度，数值乘以固定倍数）。坐标轴刻度值与原点的距离正比于该刻度的对数：</p>
+<p>[d \propto lg(x)]</p>
+<p><img src="https://img-blog.csdnimg.cn/2d2c71c6d3844ea6afb297d3dcacd3fa.png" alt="对数坐标"></p>
+<p>许多自然现象（如感官感知、物理定律）本质是比例关系而非绝对差，对数坐标能更自然地反映这种特性。当数据跨越多个数量级时，线性坐标难以同时清晰展示极小值和极大值，而对数坐标可以压缩大值尺度、扩展小值尺度，使所有数据点均匀分布，避免图形被极端值主导。</p>
+<h2 id="对数正态分布-1"><a href="#对数正态分布-1" class="headerlink" title="对数正态分布"></a>对数正态分布</h2><p>当一个事件的期望受到多个随机因素影响，并且这些影响因素之间不是互相独立的，它们体现在期望值上是相乘的关系时，这时给期望值取一个对数，就能把相乘的因子变成相加的项，因此在取对数之后呈现出正态分布，这种分布我们称之为对数正态分布。</p>
+<p>[<br>E &#x3D; X_1 X_2 X_3 \cdots<br>]</p>
+<p>[<br>logE &#x3D; logX_1 + logX_2 + logX_3 + \cdots<br>]</p>
 <p>对数正态分布也有固定的期望值和标准差，但不同于正态分布集中的概率分布，对数正态分布会有一个很长的“拖尾”，这就导致其出现极端事件的可能性要远大于正态分布。</p>
 <h1 id="幂律分布"><a href="#幂律分布" class="headerlink" title="幂律分布"></a>幂律分布</h1><p>幂律分布也是广泛存在于生活中的分布，但不同于上面两种分布，它没有固定的期望值和标准差，出现极端事件的可能性要比以上两种分布大得多，因此是最难预测的一种分布。</p>
 <p>当一个期望值包含两个指数关系时，其中一个指数衰减，另一个指数递增，这两个因素综合，就会形成幂律分布。</p>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1gh4y1W7ag/?share_source=copy_web&vd_source=af6278cfafa99ca270c20de84c9286b3">【官方双语】但是什么是中心极限定理？</a></p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1gh4y1W7ag/?share_source=copy_web&vd_source=af6278cfafa99ca270c20de84c9286b3">【【官方双语】但是什么是中心极限定理？】</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qUmMBBErp/?share_source=copy_web&vd_source=af6278cfafa99ca270c20de84c9286b3">【选择比努力更重要】</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV15kj4z4Eju/?share_source=copy_web&vd_source=af6278cfafa99ca270c20de84c9286b3">【【漫士】世界是对数的……吗？为什么？】</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1VrVSz1Eme/?share_source=copy_web&vd_source=af6278cfafa99ca270c20de84c9286b3">【【毕导】这个定律，预言了你的人生进度条】</a></p>
 
     </div>
 
@@ -329,7 +371,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83"><span class="nav-number">1.</span> <span class="nav-text">正态分布</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%B9%E6%95%B0%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83"><span class="nav-number">2.</span> <span class="nav-text">对数正态分布</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%82%E5%BE%8B%E5%88%86%E5%B8%83"><span class="nav-number">3.</span> <span class="nav-text">幂律分布</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83"><span class="nav-number">1.</span> <span class="nav-text">正态分布</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%B9%E6%95%B0%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83"><span class="nav-number">2.</span> <span class="nav-text">对数正态分布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A5%9E%E5%A5%87%E7%9A%84%E5%AF%B9%E6%95%B0"><span class="nav-number">2.1.</span> <span class="nav-text">神奇的对数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E6%95%B0%E5%9D%90%E6%A0%87"><span class="nav-number">2.2.</span> <span class="nav-text">对数坐标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E6%95%B0%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83-1"><span class="nav-number">2.3.</span> <span class="nav-text">对数正态分布</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%82%E5%BE%8B%E5%88%86%E5%B8%83"><span class="nav-number">3.</span> <span class="nav-text">幂律分布</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -389,13 +431,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">11k</span>
+    <span title="站点总字数">12k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">10 分钟</span>
+    <span title="站点阅读时长">11 分钟</span>
 </div>
 
         
