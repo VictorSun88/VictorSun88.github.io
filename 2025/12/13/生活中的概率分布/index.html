@@ -27,18 +27,18 @@
 <meta property="og:site_name" content="钟灵毓秀">
 <meta property="og:description" content="从数学上看，有很多种类的概率分布，总体根据分布形状可以分为两大类：轻尾分布与拖尾分布。所谓轻尾分布，指的是概率分布相对集中，当取值过大或过小时，概率迅速趋近于0；而拖尾分布刚好相反，概率分布相对不集中，即使数值很大以后，还是有一定的概率出现，其分布曲线呈现出一个长长的尾巴。在生活中有三种常见的概率分布，分别是正态分布（高斯分布）、对数正态分布和幂律分布。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://victorsun88.github.io/images/probability/fig1.png">
-<meta property="og:image" content="https://victorsun88.github.io/images/probability/fig5.png">
+<meta property="og:image" content="https://victorsun88.github.io/source/images/probability/fig1.png">
+<meta property="og:image" content="https://victorsun88.github.io/source/images/probability/fig5.png">
 <meta property="og:image" content="https://victorsun88.github.io/images/probability/fig2.png">
 <meta property="og:image" content="https://victorsun88.github.io/images/probability/fig3.png">
 <meta property="og:image" content="https://victorsun88.github.io/images/probability/fig4.png">
 <meta property="og:image" content="https://victorsun88.github.io/images/probability/fig6.png">
 <meta property="article:published_time" content="2025-12-13T02:37:51.121Z">
-<meta property="article:modified_time" content="2026-01-25T04:03:43.673Z">
+<meta property="article:modified_time" content="2026-02-02T06:32:09.593Z">
 <meta property="article:author" content="钟于毓">
 <meta property="article:tag" content="求知 思考 感悟 成长">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://victorsun88.github.io/images/probability/fig1.png">
+<meta name="twitter:image" content="https://victorsun88.github.io/source/images/probability/fig1.png">
 
 <link rel="canonical" href="https://victorsun88.github.io/2025/12/13/%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83/">
 
@@ -198,7 +198,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2026-01-25 12:03:43" itemprop="dateModified" datetime="2026-01-25T12:03:43+08:00">2026-01-25</time>
+                <time title="修改时间：2026-02-02 14:32:09" itemprop="dateModified" datetime="2026-02-02T14:32:09+08:00">2026-02-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -206,7 +206,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">数学基础</span></a>
+                  <a href="/categories/%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">自然科学</span></a>
                 </span>
             </span>
 
@@ -216,7 +216,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2k</span>
+              <span>2.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -239,30 +239,33 @@
 <span id="more"></span>
 <h1 id="正态分布">正态分布</h1>
 <p>正态分布是生活中最常见的分布之一，因此称之为“正态”即“正常的状态”。它的分布形状是一个钟形曲线，有明确定义(well-defined)的平均值和标准差(涨落)，并且概率分布集中于平均值的两侧，在边缘处概率值迅速减小至0，是最容易预测的一种分布。</p>
+<p>正态分布有$ -sharp $ 的特点，即正态分布量的绝对涨落 <span
+class="math inline"><em>Δ</em><em>X</em></span> 随着 <span
+class="math inline">$\sqrt{N}$</span> 的增大而增大，但相对涨落<span
+class="math inline"><em>Δ</em><em>X</em>/<em>X</em></span>却随着<span
+class="math inline">$\sqrt{N}$</span> 增大而减小。</p>
 <p><strong>中心极限定理</strong>：当一个事件的期望同时受到很多随机因素影响，并且这些随机因素之间通过叠加效应共同影响结果时，这时期望值呈现出来的分布就是正态分布。</p>
-<p>\[ E = X_1 + X_2 + X_3 + \]</p>
-<p>例如随机掷硬币，正面为+1，反面为-1，连续掷10000次时，其总和以及平均值为：
-<!-- 
-![+1和-1](/images/probability/fig1.png) 
-![+1和-1](/source/images/probability/fig1.png)
---> <img src="/images/probability/fig1.png" alt="+1和-1" /></p>
-<p>注意这里是进行10000个独立的分别抛掷1,2,<span
-class="math inline">⋯</span>,10000次硬币的实验，并不是连续抛掷10000次硬币的结果，如果连续抛掷10000次的话，结果不会如此随机，而是如下所示：
-<!-- 
-![+1和-1](/images/probability/fig5.png) 
---> <img src="/images/probability/fig5.png" alt="+1和0" /></p>
-<p>会出现大部分时间连续处于正或负的区域，其穿越 <span
-class="math inline"><em>y</em> = 0</span>
-的次数是非常有限的，而不是在0的上下来回波动，这是由于当硬币连续出现多次正或负时，曲线已经偏离0很远，如果要穿越曲线反向的话，需要先抵消掉原来的部分，就会比其单调增加要花更多的次数。</p>
-<p>当投掷次数为10000次时，其总和的概率分布呈现出正态分布： <!-- 
-![+1和-1](/images/probability/fig2.png) 
---> <img src="/images/probability/fig2.png" alt="+1和0" /></p>
-<p>如果正面为+1，反面为0，则结果变为（这类似于生男孩和女孩）： <!-- 
-![+1和-1](/images/probability/fig3.png) 
---> <img src="/images/probability/fig3.png" alt="+1和0" /></p>
-<p>如果进行10000次实验，总和概率分布为： <!-- 
-![+1和-1](/images/probability/fig4.png) 
---> <img src="/images/probability/fig4.png" alt="正态分布" /></p>
+<p><span
+class="math display"><em>E</em> = <em>X</em><sub>1</sub> + <em>X</em><sub>2</sub> + <em>X</em><sub>3</sub> + ⋯</span></p>
+<p>例如随机掷硬币，正面为+1，反面为-1，连续掷10000次时，其总和以及平均值为：</p>
+<p><img src="/source/images/probability/fig1.png" /></p>
+<p>值得注意的是，这里是进行10000个独立的分别抛掷1,2,$
+$,10000次硬币的实验，并不是连续抛掷10000次硬币的结果，如果连续抛掷10000次的话，结果不会如此随机，而是如下所示：</p>
+<p><img src="/source/images/probability/fig5.png" /></p>
+<p>累加的和会出现大部分时间连续处于正或负的区域，其穿越 $ y=0 $
+的次数是非常有限的，而不是在0的上下来回波动，这是由于当硬币连续出现多次正或负时，曲线已经偏离0很远，如果要穿越曲线反向的话，需要先抵消掉原来的部分，就会比其单调增加要花更多的次数。但是平均值就只有开始的波动比较剧烈，当随着次数的增加逐渐趋于稳定（由于正态分布$-sharp
+$
+的特点）且与10000次独立实验的平均值相同，这类似于时间平均等于系综平均。</p>
+<p><strong>各态历经假设</strong>：对于平稳随机过程，时间平均等于系综平均。所谓“系综平均”，即想象无数个完全相同的系统发生某个过程，在同一时刻对这些系统求平均，这种平均在理论计算中更容易处理（例如用随机过程理论）。</p>
+<p>当投掷次数为10000次时，其总和的概率分布呈现出正态分布：</p>
+<p><img src="/images/probability/fig2.png" /></p>
+<p>如果正面为+1，反面为0，则结果变为（这类似于生男孩和女孩）：</p>
+<p><img src="/images/probability/fig3.png" /></p>
+<p>如果进行10000次实验，总和概率分布为：</p>
+<figure>
+<img src="/images/probability/fig4.png" alt="正态分布" />
+<figcaption aria-hidden="true">正态分布</figcaption>
+</figure>
 <p>其涨落比第一种情况要小，是因为0对涨落没有贡献。</p>
 <h1 id="对数正态分布">对数正态分布</h1>
 <h2 id="神奇的对数">神奇的对数</h2>
@@ -281,10 +284,7 @@ Napier）于1614年发表《奇妙对数表》，为解决大数乘除运算的�
 <h2 id="对数坐标">对数坐标</h2>
 <p>对数坐标的定义基于对数的数学性质：坐标轴上的距离与数值的对数成正比，即等间隔对应等比例变化（如每增加一个单位刻度，数值乘以固定倍数）。坐标轴刻度值与原点的距离正比于该刻度的对数：</p>
 <p>\[ d \propto lg(x) \]</p>
-<figure>
-<img src="/images/probability/fig6.png" alt="对数坐标" />
-<figcaption aria-hidden="true">对数坐标</figcaption>
-</figure>
+<p><img src="/images/probability/fig6.png" /></p>
 <p>许多自然现象（如感官感知、物理定律）本质是比例关系而非绝对差，对数坐标能更自然地反映这种特性。当数据跨越多个数量级时，线性坐标难以同时清晰展示极小值和极大值，而对数坐标可以压缩大值尺度、扩展小值尺度，使所有数据点均匀分布，避免图形被极端值主导。</p>
 <h2 id="对数正态分布-1">对数正态分布</h2>
 <p>当一个事件的期望受到多个随机因素影响，并且这些影响因素之间不是互相独立的，它们体现在期望值上是相乘的关系时，这时给期望值取一个对数，就能把相乘的因子变成相加的项，因此在取对数之后呈现出正态分布，这种分布我们称之为对数正态分布。</p>
@@ -400,7 +400,7 @@ target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1VrVSz1Eme
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -444,13 +444,13 @@ target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1VrVSz1Eme
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">12k</span>
+    <span title="站点总字数">22k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">11 分钟</span>
+    <span title="站点阅读时长">20 分钟</span>
 </div>
 
         
